@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DOg-g9-1uk">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="UBR-em-asE">
+            <objects>
+                <navigationController id="DOg-g9-1uk" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PaE-nT-clr">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="vfT-wo-axv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NBY-on-KEu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-698" y="32"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AlbumDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LIw-uL-JLw">
+                                <rect key="frame" x="37.5" y="74" width="90" height="45"/>
+                                <color key="backgroundColor" red="0.81734885690000003" green="0.94033000950000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="DmK-Y4-7vj"/>
+                                    <constraint firstAttribute="width" constant="90" id="KHf-nh-tgQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="album"/>
+                                <connections>
+                                    <action selector="album_btn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nii-xy-1dX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="emW-hf-TFe">
+                                <rect key="frame" x="142.5" y="74" width="90" height="45"/>
+                                <color key="backgroundColor" red="0.81734885690000003" green="0.94033000950000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="BWL-mH-S8b"/>
+                                    <constraint firstAttribute="height" constant="45" id="GAF-1J-I0c"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="smartAlbum"/>
+                                <connections>
+                                    <action selector="smart_album_btn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gAv-q0-xFs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Xf-ke-zKJ">
+                                <rect key="frame" x="247.5" y="74" width="90" height="45"/>
+                                <color key="backgroundColor" red="0.81734885690000003" green="0.94033000950000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="SuL-ct-NoD"/>
+                                    <constraint firstAttribute="width" constant="90" id="ucK-nA-48W"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="moment"/>
+                                <connections>
+                                    <action selector="moment_btn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BTu-gy-XBf"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fpI-vi-Xdb">
+                                <rect key="frame" x="0.0" y="139" width="375" height="453"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="niP-O4-6si"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="UPw-Ix-uBX"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DhO-Gw-cIg">
+                                <rect key="frame" x="137" y="612" width="100" height="45"/>
+                                <color key="backgroundColor" red="0.81734885691647441" green="0.94033000952000267" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="7q1-em-XaX"/>
+                                    <constraint firstAttribute="width" constant="100" id="vJd-ao-OUP"/>
+                                </constraints>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="goNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TXO-p3-YzF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="emW-hf-TFe" firstAttribute="leading" secondItem="LIw-uL-JLw" secondAttribute="trailing" constant="15" id="C3T-zr-0QS"/>
+                            <constraint firstItem="4Xf-ke-zKJ" firstAttribute="centerY" secondItem="emW-hf-TFe" secondAttribute="centerY" id="Our-wu-41K"/>
+                            <constraint firstItem="emW-hf-TFe" firstAttribute="centerY" secondItem="LIw-uL-JLw" secondAttribute="centerY" id="SkG-Bm-FlJ"/>
+                            <constraint firstItem="emW-hf-TFe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="W6j-9Z-hkV"/>
+                            <constraint firstItem="fpI-vi-Xdb" firstAttribute="top" secondItem="emW-hf-TFe" secondAttribute="bottom" constant="20" id="cbo-lO-lGD"/>
+                            <constraint firstItem="emW-hf-TFe" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="dPv-6f-sNu"/>
+                            <constraint firstItem="fpI-vi-Xdb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fyi-YH-7IK"/>
+                            <constraint firstItem="DhO-Gw-cIg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="mJ2-1i-YqQ"/>
+                            <constraint firstItem="DhO-Gw-cIg" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-10" id="p70-nE-eSj"/>
+                            <constraint firstItem="4Xf-ke-zKJ" firstAttribute="leading" secondItem="emW-hf-TFe" secondAttribute="trailing" constant="15" id="w2v-TU-JLV"/>
+                            <constraint firstItem="DhO-Gw-cIg" firstAttribute="top" secondItem="fpI-vi-Xdb" secondAttribute="bottom" constant="20" id="yzS-dc-n3R"/>
+                            <constraint firstItem="fpI-vi-Xdb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="z3B-Yy-oGs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lYG-Ia-7DG"/>
+                    <connections>
+                        <outlet property="album_btn" destination="LIw-uL-JLw" id="Ydu-h0-VUg"/>
+                        <outlet property="moment_btn" destination="4Xf-ke-zKJ" id="olg-gy-Je6"/>
+                        <outlet property="smart_album_btn" destination="emW-hf-TFe" id="wjX-g5-jCK"/>
+                        <outlet property="tableView" destination="fpI-vi-Xdb" id="szP-FZ-WVH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="85.599999999999994" y="31.934032983508249"/>
+        </scene>
+    </scenes>
+</document>
